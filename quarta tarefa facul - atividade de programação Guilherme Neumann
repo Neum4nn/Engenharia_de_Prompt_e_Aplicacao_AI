@@ -103,5 +103,74 @@ print("Sequência de Fibonacci até", limite, ":")
 print(fibonacci_otimizada)
 
 ### Variação 3
+🧠 Ideia geral do programa
+
+O programa faz o seguinte:
+
+👉 Pede um número para você
+👉 Cria a sequência de Fibonacci
+👉 Para quando os números passam do limite que você digitou
+👉 Mostra o resultado
+
+🔢 O que é a sequência de Fibonacci?
+
+É uma sequência onde:
+
+Começa com: 0 e 1
+Depois, cada número é a soma dos dois anteriores
+
+Exemplo:
+
+0, 1, 1, 2, 3, 5, 8, 13...
+🔎 Explicação simples do código
+1. Pedir um número ao usuário
+limite = int(input("Digite o valor máximo da sequência de Fibonacci: "))
+
+👉 O programa pergunta: “até que número você quer ir?”
+👉 O valor digitado vira um número inteiro (int)
+
+2. Criar o começo da sequência
+fibonacci = [0, 1]
+
+👉 Toda sequência de Fibonacci começa com 0 e 1
+
+3. Criar novos números
+while fibonacci[-1] + fibonacci[-2] <= limite:
+
+👉 Aqui o programa verifica:
+“Se o próximo número ainda for menor ou igual ao limite, continue”
+
+[-1] → último número da lista
+[-2] → penúltimo número
+4. Somar os dois últimos valores
+fibonacci.append(fibonacci[-1] + fibonacci[-2])
+
+👉 Soma os dois últimos números
+👉 Adiciona o resultado na lista
+
+5. Mostrar o resultado
+print(fibonacci)
+
+👉 Exibe toda a sequência criada
+
+💡 Exemplo prático
+
+Se você digitar:
+
+50
+
+O programa faz:
+
+0, 1 → começa
+1 → 0+1
+2 → 1+1
+3 → 1+2
+5 → 2+3
+...
+
+Resultado final:
+
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
 ### Resultado Final
+-Considerações: 
