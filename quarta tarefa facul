@@ -1,13 +1,106 @@
 ## "Quarta tarefa facul" - 18/03"
 # Atividade – Prompt Mestre em Programação de Computadores
 
-## Tema:
+## Tema:Sequencia de fibonacci
 
-### Prompt Mestre Inicial
+# Prompt Mestre Inicial
+# Pedir o limite ao usuário
+limite = int(input("Digite o valor máximo da sequência de Fibonacci: "))
+
+# Inicializar a sequência
+fibonacci = [0, 1]
+
+# Gerar a sequência até o limite informado
+while True:
+    proximo = fibonacci[-1] + fibonacci[-2]
+    
+    if proximo > limite:
+        break
+    
+    fibonacci.append(proximo)
+
+# Exibir resultado
+print("Sequência de Fibonacci até", limite, ":")
+print(fibonacci)
 
 ### Variação 1
+# Pedir o limite ao usuário
+limite = int(input("Digite o valor máximo da sequência de Fibonacci: "))
+
+# Inicializar a sequência
+fibonacci = [0, 1]
+
+# Gerar a sequência até o limite informado
+while True:
+    proximo = fibonacci[-1] + fibonacci[-2]
+    
+    if proximo > limite:
+        break
+    
+    fibonacci.append(proximo)
+
+# Exibir resultado
+print("Sequência de Fibonacci até", limite, ":")
+print(fibonacci)
+🔎 Explicação passo a passo
+1. Entrada do usuário
+limite = int(input("Digite o valor máximo da sequência de Fibonacci: "))
+O programa pede um número ao usuário.
+input() lê o valor digitado (como texto).
+int() converte esse valor para número inteiro.
+2. Inicialização da sequência
+fibonacci = [0, 1]
+A sequência de Fibonacci sempre começa com 0 e 1.
+Criamos uma lista com esses dois valores iniciais.
+3. Loop para gerar a sequência
+while True:
+Criamos um loop infinito (while True).
+Ele só vai parar quando encontrarmos uma condição de parada.
+4. Cálculo do próximo número
+proximo = fibonacci[-1] + fibonacci[-2]
+Pegamos os dois últimos elementos da lista:
+fibonacci[-1] → último número
+fibonacci[-2] → penúltimo número
+Somamos esses valores para gerar o próximo número da sequência.
+5. Condição de parada
+if proximo > limite:
+    break
+Se o próximo número for maior que o limite informado:
+interrompemos o loop com break.
+6. Adicionar o número na lista
+fibonacci.append(proximo)
+Se o número ainda estiver dentro do limite:
+adicionamos ele à lista.
+7. Exibir o resultado
+print("Sequência de Fibonacci até", limite, ":")
+print(fibonacci)
+Mostra a sequência completa até o valor escolhido.
+💡 Exemplo
+
+Se o usuário digitar:
+
+50
+
+Saída:
+
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
 ### Variação 2
+# Entrada do usuário
+limite = int(input("Digite o valor máximo da sequência de Fibonacci: "))
+
+# Gerar sequência
+fibonacci = [0, 1]
+
+while fibonacci[-1] + fibonacci[-2] <= limite:
+    fibonacci.append(fibonacci[-1] + fibonacci[-2])
+
+# Usando compreensão de lista (exemplo: copiar ou filtrar)
+fibonacci_otimizada = [num for num in fibonacci]
+
+# Exibir resultado
+print("Sequência de Fibonacci até", limite, ":")
+print(fibonacci_otimizada)
 
 ### Variação 3
 
